@@ -95,9 +95,12 @@ let trueFalseC = [1, 2, 4, 5, 6, 7, 8, 10, 13, 14, 15];
 let trueFalse = { 424: trueFalseA, 547: trueFalseB, 629: trueFalseC };
 
 function genTest() {
-  console.log("###### Practice Test #######\n");
+  console.log("###### Practice Test #######");
+  console.log(
+    "* Number in parenthesis is the amount of questions about that topic on the actual final"
+  );
 
-  console.log("I. Definite and Indefinite Integrals (3)");
+  console.log("\nI. Definite and Indefinite Integrals (3)");
   console.log("Chapter 5 Review Exercises (no Simpson's Rule)");
   let a = rand(defIndef.length);
   console.log(defIndef[a]);
@@ -160,10 +163,12 @@ function genTest() {
 
   console.log("\nV. True/False (1)");
   let pages = [424, 547, 629];
-  let page = pages[rand(2)];
+  let i = rand(2);
+  let page = pages[i];
   console.log(
     "p." + page + ": " + trueFalse[page][rand(trueFalse[page].length)]
   );
+  pages.splice(i, 1);
 
   page = pages[rand(2)];
   console.log(
