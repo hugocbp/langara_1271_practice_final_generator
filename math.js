@@ -170,17 +170,28 @@ function genTest() {
   let pages = ["Chapter 5 T/F", "Chapter 6 T/F", "Chapter 8 T/F"];
   let i = rand(2);
   let page = pages[i];
-  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
-  pages.splice(i, 1);
+  if (page) {
+    console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+    pages.splice(i, 1);
+  }
 
   page = pages[rand(2)];
-  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+  if (page) {
+    console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+    pages.splice(i, 1);
+  }
 
   page = pages[rand(2)];
-  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+  if (page) {
+    console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+    pages.splice(i, 1);
+  }
 
   page = pages[rand(2)];
-  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+  if (page) {
+    console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+    pages.splice(i, 1);
+  }
 }
 
 function rand(a, b = 0) {
