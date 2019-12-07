@@ -95,7 +95,7 @@ let trueFalseC = [1, 2, 4, 5, 6, 7, 8, 10, 13, 14, 15];
 
 let trueFalse = {
   "Chapter 5 T/F": trueFalseA,
-  "Chapter 6 T/F": trueFalseB,
+  "Chapter 7 T/F": trueFalseB,
   "Chapter 8 T/F": trueFalseC
 };
 
@@ -167,7 +167,7 @@ function genTest() {
   // series.splice(a, 1);
 
   console.log("\nV. True/False (1)");
-  let pages = ["Chapter 5 T/F", "Chapter 6 T/F", "Chapter 8 T/F"];
+  let pages = ["Chapter 5 T/F", "Chapter 7 T/F", "Chapter 8 T/F"];
   let i = rand(2);
   let page = pages[i];
   if (page) {
