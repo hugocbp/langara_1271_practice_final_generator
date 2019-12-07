@@ -61,6 +61,7 @@ let integTech = [
 ];
 
 let applications = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 19, 20, 21];
+let appProb = [37, 38, 39];
 
 let diffEquations = [5, 6, 7, 8, 11, 13, 15, 16, 17, 18, 19, 20];
 
@@ -92,7 +93,11 @@ let trueFalseA = [1, 2, 3, 4, 5, 6, 9, 11, 12, 13, 14, 15, 19, 20, 21];
 let trueFalseB = [1, 2, 3, 4];
 let trueFalseC = [1, 2, 4, 5, 6, 7, 8, 10, 13, 14, 15];
 
-let trueFalse = { 424: trueFalseA, 547: trueFalseB, 629: trueFalseC };
+let trueFalse = {
+  "Chapter 5 T/F": trueFalseA,
+  "Chapter 6 T/F": trueFalseB,
+  "Chapter 8 T/F": trueFalseC
+};
 
 function genTest() {
   console.log("###### Practice Test #######");
@@ -114,13 +119,13 @@ function genTest() {
   console.log(defIndef[a]);
   defIndef.splice(a, 1);
 
-  a = rand(defIndef.length);
-  console.log(defIndef[a]);
-  defIndef.splice(a, 1);
+  // a = rand(defIndef.length);
+  // console.log(defIndef[a]);
+  // defIndef.splice(a, 1);
 
-  a = rand(defIndef.length);
-  console.log(defIndef[a]);
-  defIndef.splice(a, 1);
+  // a = rand(defIndef.length);
+  // console.log(defIndef[a]);
+  // defIndef.splice(a, 1);
 
   console.log(
     "\nII. Applications of Integrals, Averags, Areas, Volumes, Probabilities (3)"
@@ -134,18 +139,18 @@ function genTest() {
   console.log(applications[a]);
   applications.splice(a, 1);
 
-  a = rand(applications.length);
-  console.log(applications[a]);
-  applications.splice(a, 1);
+  a = rand(appProb.length);
+  console.log(appProb[a]);
+  appProb.splice(a, 1);
 
   console.log("\nIII. Differential Equations (1)");
   console.log("Chapter 7 Review Exercises");
   a = rand(diffEquations.length);
   console.log(diffEquations[a]);
   diffEquations.splice(a, 1);
-  a = rand(diffEquations.length);
-  console.log(diffEquations[a]);
-  diffEquations.splice(a, 1);
+  // a = rand(diffEquations.length);
+  // console.log(diffEquations[a]);
+  // diffEquations.splice(a, 1);
 
   console.log("\nIV. Series (2)");
   console.log("Chapter 8 Review Exercises");
@@ -157,23 +162,25 @@ function genTest() {
   console.log(series[a]);
   series.splice(a, 1);
 
-  a = rand(series.length);
-  console.log(series[a]);
-  series.splice(a, 1);
+  // a = rand(series.length);
+  // console.log(series[a]);
+  // series.splice(a, 1);
 
   console.log("\nV. True/False (1)");
-  let pages = [424, 547, 629];
+  let pages = ["Chapter 5 T/F", "Chapter 6 T/F", "Chapter 8 T/F"];
   let i = rand(2);
   let page = pages[i];
-  console.log(
-    "p." + page + ": " + trueFalse[page][rand(trueFalse[page].length)]
-  );
+  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
   pages.splice(i, 1);
 
   page = pages[rand(2)];
-  console.log(
-    "p." + page + ": " + trueFalse[page][rand(trueFalse[page].length)]
-  );
+  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+
+  page = pages[rand(2)];
+  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
+
+  page = pages[rand(2)];
+  console.log(page + ": " + trueFalse[page][rand(trueFalse[page].length)]);
 }
 
 function rand(a, b = 0) {
